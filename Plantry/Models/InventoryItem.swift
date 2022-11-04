@@ -7,13 +7,13 @@
 import Foundation
 
 enum Category: String {
-    case protein = "Meats/Protein"
+    case protein = "Meats-Protein"
     case vegetables = "Vegetables"
     case fruits = "Fruits"
     case spices = "Spices"
     case sauces = "Sauces"
-    case grains = "Grains/Legumes"
-    case snacks = "Snacks/Candy"
+    case grains = "Grains-Legumes"
+    case snacks = "Snacks-Candy"
     case other = "Other"
 }
 enum Location: String {
@@ -21,6 +21,7 @@ enum Location: String {
     case freezer = "Freezer"
     case cupboard = "Cupboards"
     case shelves = "Shelves"
+    case other =  "Other"
 }
 enum Measure: String {
     case items = "Units"
@@ -32,10 +33,16 @@ enum Measure: String {
 struct InventoryItem: Identifiable {
     var id: String = UUID().uuidString
     var title: String
-    var quantity: String
+    var quantity: Double
     var category: Category
     var location: Location
-    var unitMeasure: String
+    var unitMeasure: Measure
     var comments: String
 }
 
+let testDataItems = [
+    InventoryItem(title: "Salt", quantity: 2, category: .spices, location: .other, unitMeasure: .bags, comments: "On countertop"),
+    InventoryItem(title: "Oregano", quantity: 2, category: .spices, location: .cupboard, unitMeasure: .bags, comments: "On countertop"),
+    InventoryItem(title: "Chicken Breast", quantity: 2, category: .protein, location: .freezer, unitMeasure: .items, comments: "Second drawer"),
+    InventoryItem(title: "Pork Mince", quantity: 2, category: .protein, location: .freezer, unitMeasure: .bags, comments: "Second drawer")
+]

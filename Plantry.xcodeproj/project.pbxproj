@@ -10,6 +10,10 @@
 		9A31A75028FFB32000863AFF /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A31A74F28FFB32000863AFF /* SignInViewModel.swift */; };
 		9A31A75428FFB80B00863AFF /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A31A75328FFB80B00863AFF /* InventoryItem.swift */; };
 		9A31A75728FFC01700863AFF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9A31A75628FFC01700863AFF /* FirebaseFirestoreSwift */; };
+		9A31A75928FFCB0900863AFF /* InventoryListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A31A75828FFCB0900863AFF /* InventoryListItemView.swift */; };
+		9A31A75B28FFCB3300863AFF /* InventoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A31A75A28FFCB3300863AFF /* InventoryItemView.swift */; };
+		9A31A75E2900F12B00863AFF /* InventoryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A31A75D2900F12B00863AFF /* InventoryItemViewModel.swift */; };
+		9AB387EC290239DE00F7C7B9 /* InventoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB387EB290239DE00F7C7B9 /* InventoryListViewModel.swift */; };
 		9ABDC72E28F1B21E00F54C54 /* PlantryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABDC72D28F1B21E00F54C54 /* PlantryApp.swift */; };
 		9ABDC73028F1B21E00F54C54 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABDC72F28F1B21E00F54C54 /* SignInView.swift */; };
 		9ABDC73228F1B22000F54C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ABDC73128F1B22000F54C54 /* Assets.xcassets */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		9A31A74F28FFB32000863AFF /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		9A31A75328FFB80B00863AFF /* InventoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItem.swift; sourceTree = "<group>"; };
+		9A31A75828FFCB0900863AFF /* InventoryListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListItemView.swift; sourceTree = "<group>"; };
+		9A31A75A28FFCB3300863AFF /* InventoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemView.swift; sourceTree = "<group>"; };
+		9A31A75D2900F12B00863AFF /* InventoryItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemViewModel.swift; sourceTree = "<group>"; };
+		9AB387EB290239DE00F7C7B9 /* InventoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListViewModel.swift; sourceTree = "<group>"; };
 		9ABDC72A28F1B21E00F54C54 /* Plantry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABDC72D28F1B21E00F54C54 /* PlantryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantryApp.swift; sourceTree = "<group>"; };
 		9ABDC72F28F1B21E00F54C54 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -48,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				9A31A74F28FFB32000863AFF /* SignInViewModel.swift */,
+				9A31A75D2900F12B00863AFF /* InventoryItemViewModel.swift */,
+				9AB387EB290239DE00F7C7B9 /* InventoryListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -56,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				9ABDC72F28F1B21E00F54C54 /* SignInView.swift */,
+				9A31A75828FFCB0900863AFF /* InventoryListItemView.swift */,
+				9A31A75A28FFCB3300863AFF /* InventoryItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -73,6 +85,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A31A75C2900F0EC00863AFF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9ABDC72D28F1B21E00F54C54 /* PlantryApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		9ABDC72128F1B21E00F54C54 = {
@@ -95,9 +115,9 @@
 		9ABDC72C28F1B21E00F54C54 /* Plantry */ = {
 			isa = PBXGroup;
 			children = (
+				9A31A75C2900F0EC00863AFF /* App */,
 				9A31A75228FFB7D300863AFF /* Models */,
 				9A31A74E28FFB2FD00863AFF /* ViewModels */,
-				9ABDC72D28F1B21E00F54C54 /* PlantryApp.swift */,
 				9A31A75128FFB68200863AFF /* Views */,
 				9ABDC73128F1B22000F54C54 /* Assets.xcassets */,
 				9ABDC74028F1CDE700F54C54 /* GoogleService-Info.plist */,
@@ -194,8 +214,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ABDC73028F1B21E00F54C54 /* SignInView.swift in Sources */,
+				9A31A75E2900F12B00863AFF /* InventoryItemViewModel.swift in Sources */,
+				9A31A75928FFCB0900863AFF /* InventoryListItemView.swift in Sources */,
 				9ABDC72E28F1B21E00F54C54 /* PlantryApp.swift in Sources */,
 				9A31A75028FFB32000863AFF /* SignInViewModel.swift in Sources */,
+				9AB387EC290239DE00F7C7B9 /* InventoryListViewModel.swift in Sources */,
+				9A31A75B28FFCB3300863AFF /* InventoryItemView.swift in Sources */,
 				9A31A75428FFB80B00863AFF /* InventoryItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
